@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You're My Everything</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        p {
+            font-size: 1.5em;
+            margin: 20px 0;
+            opacity: 0;
+            animation: fadeInText 4s ease-in-out forwards;
+        }
+
+        .heart {
+            font-size: 4em;
+            color: #ff1493;
+            animation: pulseHeart 1.5s infinite;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff4500;
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInText {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulseHeart {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>You Are My Everything(Ronna Mae Odena Garcia)</h1>
+        <p id="loveMessage">Every moment with you feels like magic. I am so lucky to have you in my life, and I want to be with you always. ❤️</p>
+        <div class="heart" id="heart">💖</div>
+        <button onclick="displayMessage()">Click to Hear My Heartbeat</button>
+    </div>
+
+    <script>
+        // Function to display a sweet message with sound
+        function displayMessage() {
+            let message = document.getElementById('loveMessage');
+            message.innerHTML = "My heart beats for you, now and forever. I love you more than words can express!";
+            message.style.color = '#ff69b4'; // Change the message color to pink
+            message.style.fontSize = '1.8em'; // Increase the font size
+
+            let audio = new Audio('https://www.soundjay.com/button/beep-07.wav'); // Heartbeat sound
+            audio.play();
+        }
+    </script>
+
+</body>
+</html>
